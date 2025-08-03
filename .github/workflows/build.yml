@@ -30,6 +30,8 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/arm64 \
+            --tag ghcr.io/${{ steps.lowercase.outputs.repo }}:latest \
             --tag ghcr.io/${{ steps.lowercase.outputs.repo }}:${{ github.ref_name }} \
             --tag ghcr.io/${{ steps.lowercase.outputs.repo }}:${{ github.sha }} \
             --push .
+
