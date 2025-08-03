@@ -40,7 +40,7 @@ def format_prices(prices):
         vendor = item["vendor"]
         buy = format_price(item["buy_price"])
         sell = format_price(item["sell_price"])
-        body += f"🏷 <b>{vendor}</b>\n💰 خرید: {buy}  \n  🛒 فروش: {sell}\n\n"
+        body += f"🏷 <b>{vendor}</b>\n💰خرید: {buy}|🛒فروش: {sell}\n\n"
 
     return header + body
 

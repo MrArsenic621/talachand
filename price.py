@@ -60,6 +60,8 @@ def get_all_vendors_prices():
             continue
         if prices["buy_price"] == 0 or prices["sell_price"] == 0:
             continue
+        prices['buy_price'] = int(prices['buy_price']/10)
+        prices['sell_price'] = int(prices['sell_price']/10)
         prices["vendor"] = vendor_name[vendor]
         data.append(prices)
 
